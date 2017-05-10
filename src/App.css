@@ -9,9 +9,15 @@
 
 .appHeader {
   background-color: #222;
-  height: 150px;
+  height: 25px;
   padding: 20px;
   color: white;
+}
+
+.brandname {
+  margin: 0;
+  border-bottom: 1px black solid;
+  margin-bottom: 16px;
 }
 
 .appIntro {
