@@ -1,5 +1,8 @@
+@import url(https://fonts.googleapis.com/css?family=Roboto+Slab|Open+Sans:400italic,700italic,400,700);
+
 .app {
   text-align: center;
+  font-family: 'Roboto Slab', serif;
 }
 
 .appLogo {
@@ -21,10 +24,40 @@
 }
 
 .appIntro {
+  margin-top: 19px;
   font-size: large;
+}
+
+.logo {
+      width: 65px;
+    height: 65px;
+    float: left;
+    padding: 5px;
+    border: 2px solid #b1b1b1;
+    border-radius: 50%;
+    margin-top: -16px;
+}
+
+.spin {
+  animation: appLogo-spin infinite 1s linear;
 }
 
 @keyframes appLogo-spin {
   from { transform: rotate(0deg); }
   to { transform: rotate(360deg); }
+}
+
+.btn{
+  background: transparent;
+  padding: 15px;
+  margin: 0 15px;
+  font-size: 26px;
+}
+
+.inputField{
+  display: flex;
+  margin: 0 auto;
+  padding: 8px 6px; 
+  font-size: 16px;
+  min-width: 220px;
 }

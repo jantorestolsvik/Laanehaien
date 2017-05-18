@@ -1,12 +1,19 @@
-import React, { Component } from 'react';
+import React from 'react';
 import classnames from 'classnames';
-import logo from '../logo.svg';
-import { brandname } from '../App.css';
+import { brandname, logo } from '../App.css';
+
+import {
+  Link
+} from 'react-router-dom';
+
 
 const Header = () => (
   <header>
     <div className={classnames(brandname)}>
-      <h2>Lånehaien</h2>
+      <Link to="/">
+        <img className={classnames(logo)} src="shark.png" alt="logo" />
+      </Link>
+      <h2 style={{padding: '15px 0px'}}>Lånehaien</h2>
     </div>
   </header>
 )
