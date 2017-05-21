@@ -9,6 +9,7 @@ import Home from '../containers/Home';
 import Signup from '../containers/Signup';
 import Login from '../containers/LogIn';
 import Loan from '../containers/Loan';
+import Loans from '../containers/Loans';
 
 
 const Routes = () => (
@@ -17,6 +18,7 @@ const Routes = () => (
       <Route path='/signup' component={Signup}/>
       <Route path='/login' component={Login}/>
       <Route path='/loan' component={Loan}/>
+      <Route path='/loans' component={Loans}/>
     </Switch>
 )
 
