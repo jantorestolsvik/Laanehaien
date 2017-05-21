@@ -3,12 +3,20 @@ import classnames from 'classnames';
 import { app } from './App.css';
 import Header from './components/Header';
 import Routes from './routes/Routes';
-import {createStore} from 'redux';
+import {createStore, applyMiddleware, compose} from 'redux';
+import thunk from 'redux-thunk'
 import {Provider} from 'react-redux';
 import reducer from './modules/index';
 import {addLoans} from './modules/loans';
 
-const store = createStore(reducer);
+const composeEnhancers = window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__ || compose;
+
+const store = createStore(
+    reducer,
+    composeEnhancers(
+        applyMiddleware(thunk)
+    )
+);
 
 fetch('/api')
     .then(respons => respons.json())

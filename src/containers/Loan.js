@@ -1,56 +1,10 @@
-import React, { Component } from 'react';
-import classnames from 'classnames';
-import { appIntro, form, btn } from '../App.css';
+import {connect} from 'react-redux';
+import Loan from '../components/Loan';
+import {postLoan} from '../modules/loans';
 
-class Loan extends Component {
-  
-  constructor() {
-    super();
-    this.state = {
-      value: 5,
-      maxLoan: 500000,
-    };
-  }
-
-  getLoan() {
-      const {
-          value,
-          maxLoan
-      } = this.state;
-      return value * maxLoan;
-  } 
-  
-  handleChange(e) {
-      this.setState({
-          value: e.target.value
-      })
-  }
-  
-  handleSubmit(e) {
-      e.preventDefault();
-      console.log('TODO: handle submit', this.getLoan());
-  }
-
-  renderLoan(loan) {
-       return loan.toString().replace(/\B(?=(\d{3})+(?!\d))/g, " ");
-  }
-  
-  render() {
-    return (
-      <div className={classnames(appIntro)}>
-        <form className={classnames(form)} onSubmit={e => this.handleSubmit(e)}>
-            <br /><br />
-            <input style={{width: 277}} type="range" name="points" min="0.01" max="12" step="0.2" value={this.state.value} onChange={e => this.handleChange(e) } />
-            <br />
-            <br />
-            Jeg vil låne { this.renderLoan(parseInt(this.state.value * this.state.maxLoan, 0)) },- kr
-            <br />
-            <br />
-            <button className={classnames(btn)} type="submit">Søk om lån</button>
-        </form>
-    </div>
-    );
-  }
-}
-
-export default Loan;
+export default connect(
+    null,
+    {
+        postLoan
+    }
+)(Loan);
