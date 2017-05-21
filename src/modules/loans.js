@@ -22,7 +22,7 @@ export const postLoan = loan => dispatch => {
         body: JSON.stringify(loan)
     })
         .then(response => response.json())
-        .then(loan => dispatch(addLoan(loan)));
+        .then(respons => dispatch(addLoan(respons.loan)));
 };
 
 // selectors
@@ -34,7 +34,7 @@ export default (state = [], action = {}) => {
         case ADD_LOANS:
             return action.payload;
         case ADD_LOAN:
-            return [...state, action.payload.loan];
+            return [...state, action.payload];
     }
     return state;
 }
