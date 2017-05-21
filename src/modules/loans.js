@@ -16,7 +16,7 @@ export const postLoan = loan => dispatch => {
     var headers = new Headers();
     headers.append("Content-Type", "application/json");
 
-    fetch('/api', {
+    return fetch('/api', {
         method: 'POST',
         headers,
         body: JSON.stringify(loan)
