@@ -8,6 +8,7 @@ process.env.NODE_ENV = 'development';
 // https://github.com/motdotla/dotenv
 require('dotenv').config({silent: true});
 
+var restAPIStatus = require('./restServer');
 var chalk = require('chalk');
 var webpack = require('webpack');
 var WebpackDevServer = require('webpack-dev-server');
@@ -92,6 +93,8 @@ function setupCompiler(host, port, protocol) {
       console.log('The app is running at:');
       console.log();
       console.log('  ' + chalk.cyan(protocol + '://' + host + ':' + port + '/'));
+      console.log();
+      console.log(restAPIStatus);
       console.log();
       console.log('Note that the development build is not optimized.');
       console.log('To create a production build, use ' + chalk.cyan(cli + ' run build') + '.');
