@@ -27,6 +27,7 @@ export const postLoan = loan => dispatch => {
 
 // selectors
 export const getLoans = state => state;
+export const getLoanSum = state => state.reduce((sum, loan) => sum + loan.amount, 0);
 
 // reducer
 export default (state = [], action = {}) => {

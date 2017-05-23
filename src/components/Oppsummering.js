@@ -21,13 +21,15 @@ class Oppsummering extends Component {
                 Din oppsummering
                 {
                     this.state.expanded &&
-                    <div>Hello world</div>
+                    <div>Din sum: {this.props.loanSum}</div>
                 }
             </div>
         );
     }
 }
 
-Oppsummering.propTypes = {};
+Oppsummering.propTypes = {
+    loanSum: PropTypes.number
+};
 
 export default Oppsummering;

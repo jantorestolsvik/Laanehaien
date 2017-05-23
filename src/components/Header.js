@@ -1,7 +1,7 @@
 import React from 'react';
 import classnames from 'classnames';
 import { brandname, logo } from '../App.css';
-import Oppsummering from './Oppsummering'
+import Oppsummering from '../containers/Oppsummering'
 
 import {
   Link

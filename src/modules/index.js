@@ -7,3 +7,4 @@ export default combineReducers({
 })
 
 export const getLoans = state => fromLoans.getLoans(state.loans);
+export const getLoanSum = state => fromLoans.getLoanSum(state.loans);
