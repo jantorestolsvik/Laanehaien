@@ -35,6 +35,7 @@ export default (state = [], action = {}) => {
             return action.payload;
         case ADD_LOAN:
             return [...state, action.payload];
+        default:
+            return state;
     }
-    return state;
 }
