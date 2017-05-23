@@ -16,7 +16,7 @@ class Oppsummering extends Component {
     };
 
     render() {
-        const {loanSum, nextInterestPayment} = this.props;
+        const {loanSum, nextInterestPayment, nextPayment} = this.props;
         return (
             <div onClick={this.toggleExpand}>
                 Din oppsummering
@@ -24,7 +24,8 @@ class Oppsummering extends Component {
                     this.state.expanded &&
                     [
                         <div>Din sum: {loanSum}</div>,
-                        <div> Din neste rentebetaling: {nextInterestPayment}</div>
+                        <div> Din neste rentebetaling: {nextInterestPayment}</div>,
+                        <div> Din neste innbetaling: {nextPayment}</div>
                     ]
                 }
             </div>
@@ -34,7 +35,8 @@ class Oppsummering extends Component {
 
 Oppsummering.propTypes = {
     loanSum: PropTypes.number,
-    nextInterestPayment: PropTypes.number
+    nextInterestPayment: PropTypes.number,
+    nextPayment: PropTypes.number
 };
 
 export default Oppsummering;
