@@ -2,7 +2,7 @@ import {connect} from 'react-redux';
 import Oppsummering from '../components/Oppsummering';
 import {getLoanSum, getLoans} from '../modules/index';
 
-const mapStateToProps = (state) => {
+export const mapStateToProps = (state) => {
     return {
         loanSum: getLoanSum(state),
         nextInterestPayment: getLoans(state)
