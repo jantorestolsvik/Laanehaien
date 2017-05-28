@@ -1,6 +1,6 @@
 import React from 'react';
 import classnames from 'classnames';
-import style from '../styles/App.css';
+import style from '../App.css';
 
 import {
   Link

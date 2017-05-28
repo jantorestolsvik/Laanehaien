@@ -1,0 +1,22 @@
+.btn{
+    composes: btn from "../App.css";
+}
+
+.btnDisabled{
+  composes: btn;
+  cursor: not-allowed;
+}
+
+
+.inputField{
+  display: flex;
+  margin: 0 auto;
+  padding: 8px 6px; 
+  font-size: 16px;
+  min-width: 220px;
+}
+
+.risiko{
+  background: #dedede;
+  padding: 15px 0;
+}
