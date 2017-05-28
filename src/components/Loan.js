@@ -51,7 +51,11 @@ class Loan extends Component {
 
   handleSubmit(e) {
     e.preventDefault();
-    this.props.postLoan({ amount: this.getLoanValue() });
+    this.props.postLoan({
+      amount: this.getLoanValue(),
+      interest: 0.46,
+      paydownMonths: 12
+    });
   }
 
   handleDisabledBtn() {
