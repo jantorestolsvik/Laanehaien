@@ -10,11 +10,11 @@ app.use(bodyParser.json());
 
 var loans = [
     {
-        id: uuid(),
-        name: "loan 1",
         amount: 123,
         interest: 0.46,
-        paydownMonths: 12
+        paydownMonths: 12,
+        id: uuid(),
+        name: "loan 1",
     }
 ];
 
