@@ -11,11 +11,8 @@ const Home = () => (
     <br />
     <br />
     <div>
-      <Link to="/login">
-        <button className={classnames(btn)}>Logg inn</button>
-      </Link>
-      <Link to="/signup">
-        <button className={classnames(btn)}>Sign up</button>
+      <Link to="/loan">
+        <button className={classnames(btn)}>Jeg vil søke om lån</button>
       </Link>
     </div>
   </div>
