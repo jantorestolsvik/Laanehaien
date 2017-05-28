@@ -18,7 +18,17 @@ See the section about [running tests](#running-tests) for more information.
 ## Oppgaver
 
 ### Lag en "oppsummeringskomponent" som kan åpnes og lukkes
+- Tilstanden skal være lokal i komponenten
+- Komponenten kan brukes i Headerkomponenten så er den synlig på alle routes
+
+### Vis frem din totale belåning, hvor mye du må betale neste måned og hvor mye av den betalingen som er render.
+- Skal vises i oppsummeringskomponenten
+- Du trenger ikke lagre den nye tilstanden på serveren
+- Bruk connect til å koble komponenten til redux
+- Bruk mapStateToProps i connect til å transformere dataene som skal vises.
 
 ### Gjør det mulig å ikke betale avdrag på et lån mot en avgift på 100 kr
-
-### Vis frem din totale belåning og hvor mye du må betale neste måned i oppsummeringskomponenten
+- Lag støtte i reduceren for en ny action som kan sette paydownMonths på et lån til Number.MAX_VALUE eller finn en annen løsning.
+- Legg til 100 kr på lånet dersom avdrag slås av
+- Lag en funksjon i mapDispatchToProps i connect som kan dispatche den nye actionen.
+- Lag en knapp som kan kaller funksjonen fra mapDispatchToProps med IDen på lånet
