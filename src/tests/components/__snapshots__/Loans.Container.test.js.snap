@@ -1,0 +1,3 @@
+exports[`test should render the loan container 1`] = `<div />`;
+
+exports[`test should render the loans container 1`] = `<div />`;

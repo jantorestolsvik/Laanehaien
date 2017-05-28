@@ -43,14 +43,10 @@ class Loan extends Component {
     });
   }
 
-  handleChange(e) {
+  handleChange(value) {
     this.setState({
-      value: e.target.value
+      value
     })
-  }
-
-  handleStuff(){
-    console.log(1)
   }
 
   handleSubmit(e) {
@@ -72,8 +68,8 @@ class Loan extends Component {
       <div className={classnames(styles.appIntro)}>
         <form className={classnames(styles.form)} onSubmit={e => this.handleSubmit(e)}>
           <br /><br />
-          <input style={{ width: 277 }} type="range" name="points" min="0.01" max="12" step="0.2" value={this.state.value} onChange={e => this.handleChange(e)} />
-          <p>Jeg vil låne {this.renderLoan(parseInt(this.getLoanValue(), 0))},- kr</p>
+          <input style={{ width: 277 }} type="range" name="points" min="0.01" max="12" step="0.2" value={this.state.value} onChange={e => this.handleChange(e.target.value)} />
+          <p>Jeg vil låne <span name="amount">{this.renderLoan(parseInt(this.getLoanValue(), 0))},- kr</span></p>
 
           <div className={classnames(styles.risiko)}>
             <h3 style={{ margin: 0 }}>Risiko:</h3>
@@ -93,6 +89,7 @@ class Loan extends Component {
               <span>Jeg godtar risikoen</span>
               <input
                 type="checkbox"
+                name="doRisk"
                 onChange={() => this.handleDisabledBtn()}
               />
             </label>
