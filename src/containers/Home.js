@@ -1,6 +1,6 @@
 import React from 'react';
 import classnames from 'classnames';
-import { appIntro, btn } from '../App.css';
+import { appIntro, btn } from '../styles/App.css';
 import {
   Link
 } from 'react-router-dom';

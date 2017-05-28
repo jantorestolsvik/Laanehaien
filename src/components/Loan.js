@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import classnames from 'classnames';
-import { appIntro, form, btn } from '../App.css';
+import { appIntro, form, btn } from '../styles/App.css';
 
 class Loan extends Component {
 

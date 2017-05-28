@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import classnames from 'classnames';
-import { app } from './App.css';
+import { app } from './styles/App.css';
 import Header from './components/Header';
 import Routes from './routes/Routes';
 import {createStore, applyMiddleware, compose} from 'redux';
