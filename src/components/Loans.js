@@ -1,4 +1,5 @@
-import React, {PropTypes} from 'react';
+import React from 'react';
+import PropTypes from 'prop-types';
 
 export const Loans = ({loans}) => (
     <div>
@@ -11,5 +12,5 @@ export const Loans = ({loans}) => (
 );
 
 Loans.propTypes = {
-    loans: PropTypes.array
+    loans: PropTypes.array.isRequired
 };
