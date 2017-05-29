@@ -18,8 +18,16 @@ See the section about [running tests](#running-tests) for more information.
 ## Oppgaver
 
 ### Lag en "risikokomponent" 
-- I `./components/Loan` er det litt kaos. Den har blant annet en `div` som viser risko for de ulike beløpene. 
+- I `components/Loan` er det litt kaos. Den har blant annet en `div` som viser risko for de ulike beløpene. 
 Dette bør være en egen komponent.
+
+### Lage en knapp på forsiden
+- Denne knappen skal route deg til `/loans`
+
+### Forbedre "loans"-komponent
+- På `components/Loans` vises lånene dine JSON.stringified. Dette er ikke veldig pent. Det bør heller være en komponent.
+- Hver og en av underelementene til denne listen burde også være en egen komponent, f.eks. `LoanItem`. Skriv denne.
+
 
 ### Lag en "oppsummeringskomponent" som kan åpnes og lukkes
 - Tilstanden skal være lokal i komponenten
