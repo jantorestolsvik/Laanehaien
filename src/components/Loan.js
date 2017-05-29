@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import classnames from 'classnames/bind';
+import Risiko from './Risiko';
 import styles from './Loan.css';
 
 let cx = classnames.bind(styles);
@@ -74,20 +75,7 @@ class Loan extends Component {
           <br /><br />
           <input style={{ width: 277 }} type="range" name="points" min="0.01" max="12" step="0.2" value={this.state.value} onChange={e => this.handleChange(e.target.value)} />
           <p>Jeg vil låne <span name="amount">{this.renderLoan(parseInt(this.getLoanValue(), 0))},- kr</span></p>
-
-          <div className={classnames(styles.risiko)}>
-            <h3 style={{ margin: 0 }}>Risiko:</h3>
-            <p style={{ marginTop: 0 }}>(Om man ikke betaler)</p>
-
-            <ul style={{ width: 150, margin: '0 auto' }}>
-              {
-                this.getRisks().map((risk, index) => {
-                  return <li key={index}> {risk.name}</li>
-                })
-              }
-            </ul>
-          </div>
-
+          <Risiko items={this.getRisks()} />
           <p>
             <label>
               <span>Jeg godtar risikoen</span>
