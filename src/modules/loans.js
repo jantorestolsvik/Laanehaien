@@ -54,6 +54,8 @@ export default (state = [], action = {}) => {
                 }
                 return loan;
             })
+        default:
+            return state;
     }
     return state;
 }

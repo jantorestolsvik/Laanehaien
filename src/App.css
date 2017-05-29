@@ -29,13 +29,14 @@
 }
 
 .logo {
-      width: 65px;
+    width: 65px;
     height: 65px;
-    float: left;
     padding: 5px;
     border: 2px solid #b1b1b1;
     border-radius: 50%;
-    margin-top: -16px;
+    margin-top: -11px;
+    position: absolute;
+    left: 6px
 }
 
 .spin {
@@ -52,12 +53,5 @@
   padding: 15px;
   margin: 0 15px;
   font-size: 26px;
-}
-
-.inputField{
-  display: flex;
-  margin: 0 auto;
-  padding: 8px 6px; 
-  font-size: 16px;
-  min-width: 220px;
+  cursor: pointer;
 }

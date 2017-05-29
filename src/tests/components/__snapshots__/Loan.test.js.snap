@@ -1,0 +1,84 @@
+exports[`Loan component should render 1`] = `
+<div
+  className="">
+  <form
+    className=""
+    onSubmit={[Function]}>
+    <br />
+    <br />
+    <input
+      max="12"
+      min="0.01"
+      name="points"
+      onChange={[Function]}
+      step="0.2"
+      style={
+        Object {
+          "width": 277,
+        }
+      }
+      type="range"
+      value={5} />
+    <p>
+      Jeg vil låne 
+      <span
+        name="amount">
+        2 500 000
+        ,- kr
+      </span>
+    </p>
+    <div
+      className="">
+      <h3
+        style={
+          Object {
+            "margin": 0,
+          }
+        }>
+        Risiko:
+      </h3>
+      <p
+        style={
+          Object {
+            "marginTop": 0,
+          }
+        }>
+        (Om man ikke betaler)
+      </p>
+      <ul
+        style={
+          Object {
+            "margin": "0 auto",
+            "width": 150,
+          }
+        }>
+        <li>
+           
+          Brukket tann
+        </li>
+        <li>
+           
+          Knekt ben
+        </li>
+      </ul>
+    </div>
+    <p>
+      <label>
+        <span>
+          Jeg godtar risikoen
+        </span>
+        <input
+          name="doRisk"
+          onChange={[Function]}
+          type="checkbox" />
+      </label>
+    </p>
+    <button
+      className="btn btnDisabled"
+      disabled={true}
+      type="submit">
+       Søk om lån
+    </button>
+  </form>
+</div>
+`;

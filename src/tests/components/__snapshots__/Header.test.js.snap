@@ -1,0 +1,22 @@
+exports[`test should render the header 1`] = `
+<header>
+  <div
+    className={undefined}>
+    <a
+      href="/#">
+      <img
+        alt="logo"
+        className={undefined}
+        src="shark.png" />
+    </a>
+    <h2
+      style={
+        Object {
+          "padding": "15px 0px",
+        }
+      }>
+      Lånehaien
+    </h2>
+  </div>
+</header>
+`;

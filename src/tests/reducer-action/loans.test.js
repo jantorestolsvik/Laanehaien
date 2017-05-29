@@ -1,5 +1,5 @@
-import reducer from './loans';
-import {addLoan, addLoans, postLoan} from './loans'
+import reducer from '../../modules/loans';
+import {addLoan, addLoans, postLoan} from '../../modules/loans'
 
 describe('loans reducer', () => {
 

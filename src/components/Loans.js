@@ -1,9 +1,10 @@
-import React, {PropTypes} from 'react';
+import React from 'react';
+import PropTypes from 'prop-types';
 
 export const Loans = ({loans, toggleInstallments}) => (
     <div>
-        {loans.map(loan => (
-            <div>
+        {loans.map((loan, index) => (
+            <div key={index}>
                 {JSON.stringify(loan)}
                 <button onClick={() => {
                 	toggleInstallments(loan.id)
@@ -16,6 +17,6 @@ export const Loans = ({loans, toggleInstallments}) => (
 );
 
 Loans.propTypes = {
-    loans: PropTypes.array,
+    loans: PropTypes.array.isRequired,
     toggleInstallments: PropTypes.func
 };
