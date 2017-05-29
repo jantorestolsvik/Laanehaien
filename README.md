@@ -17,6 +17,10 @@ See the section about [running tests](#running-tests) for more information.
 
 ## Oppgaver
 
+### Lag en "risikokomponent" 
+- I `./components/Loan` er det litt kaos. Den har blant annet en `div` som viser risko for de ulike beløpene. 
+Dette bør være en egen komponent.
+
 ### Lag en "oppsummeringskomponent" som kan åpnes og lukkes
 - Tilstanden skal være lokal i komponenten
 - Komponenten kan brukes i Headerkomponenten så er den synlig på alle routes
